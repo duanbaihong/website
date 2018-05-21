@@ -18,7 +18,14 @@ class Website extends Component {
       verticalAlign:        false,
       sectionPaddingTop:    "0px",
       sectionPaddingBottom: "0px",
-      arrowNavigation:      true
+      arrowNavigation:      false,
+      navigationClass:      "navclass",
+      navigationAnchorClass: "navclild",
+      // className: "test",
+      delay:                900,
+      scrollCallback:       (a)=>{
+                              console.log(a)
+                            }
     };
  
     return (
