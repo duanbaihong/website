@@ -5,6 +5,8 @@ import {
   Section
 } from 'react-fullpage';
 import Header from './Header';
+import section2img from './images/section2.jpg'
+import section3img from './images/section3.jpg'
 // const app = document.querySelector('#root');
 
 class Website extends Component {
@@ -17,6 +19,7 @@ class Website extends Component {
       verticalAlign:        false,
       sectionPaddingTop:    "0px",
       sectionPaddingBottom: "0px",
+      // activeSection:        "sectionOne",
       arrowNavigation:      false,
       navigationClass:      "navclass",
       navigationAnchorClass: "navclild",
@@ -31,16 +34,19 @@ class Website extends Component {
     return (
       <div>
         <Header className="header">
-          <a href="#sectionOne">Section One</a>
-          <a href="#sectionTwo">Section Two</a>
-          <a href="#sectionThree">Section Three</a>
-          <a href="#sectionFour">Section Foure</a>
+          
         </Header>
         <ScrollToTopOnMount />
         <SectionsContainer className="container" {...options}>
-          <Section className="custom-section" verticalAlign="true" color="#69D2E7">Page 1</Section>
-          <Section color="#A7DBD8">Page 2</Section>
-          <Section color="#E0E4CC">Page 3</Section>
+          <Section className="custom-section" verticalAlign="true" color="#69D2E7">
+
+          </Section>
+          <Section color="#A7DBD8" >
+            <div style={{backgroundImage: "url("+section2img+")",backgroundSize: "100% 100%",backgroundRepeat:"no-repeat",height:"100%",width:"100%"}}></div>
+          </Section>
+          <Section color="#E0E4CC">
+            <div style={{backgroundImage: "url("+section3img+")",backgroundSize: "100% 100%",backgroundRepeat:"no-repeat",height:"100%",width:"100%"}}></div>
+          </Section>
           <Section color="#E1532D">Page 4</Section>
         </SectionsContainer>
       </div>

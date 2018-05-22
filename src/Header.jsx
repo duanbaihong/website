@@ -1,5 +1,5 @@
 import React from 'react';
-
+import logo from './images/logo.png';
 export default class Header extends React.PureComponent {
 	// constructor(props) {
 	// 	super(props);
@@ -9,7 +9,9 @@ export default class Header extends React.PureComponent {
 		return (
 			<div className={"header"}>
 				<div className={"headerbody"}>
-						<div></div>
+						<div className={"headerlogo"}>
+							<img src={logo} alt={"念世情纪念钻石-永恒的爱"}/> 
+						</div>
 						<div className={"navbar"}>
 							<ul>
 								<li>首页</li>
