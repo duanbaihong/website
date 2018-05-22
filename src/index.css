@@ -7,28 +7,90 @@ body {
 	position: fixed;
     z-index: 10;
     right: 10px;
+    width: 20px;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 .navclild {
-	display: block;
-    margin: 12px;
-    border-radius: 12px;
-    height: 5px;
-	width:5px;
-    /*border:1px solid #747872;*/
-    background-color: #fff;
-    transition: all 0.2s;
-    transform: none;
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    text-decoration: none;
 }
-.navclild.active{
-	/*margin: 12px;*/
-	/*padding: 6px;*/
-	-webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
+.navclild::before{
+    content: ' ';
+    display: block;
+    height: 5px;
+    width: 5px;
+    border: 0;
+    background-color: rgba(50,50,50,0.4);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    transition: all 0.2s;
+}
+.navclild.active::before{
+    r-radius: 50%;
+    position: absolute;
+    z-index: 1;
     height: 12px;
     width: 12px;
-    /*margin: -6px 0 0 -6px;*/
-    border-radius: 100%;
-    background-color: rgb(85, 98, 112);
+    border: 0;
+    background-color: rgba(50,50,50,0.4);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.navclild:hover::before{
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+@media (max-width:767px)  {
+    .navclass{
+        right: -10px;
+    }
+}
+
+/*header 部份*/
+.header{
+    width: 100%;
+    z-index: 10;
+    height: 50px;
+    position: fixed;
+    background-color: rgba(51,53,52);
+}
+.header>.headerbody{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header>.headerbody>.navbar{
+    float: right;
+}
+ul,li{
+    list-style-type: none;
+}
+.header>.headerbody>.navbar>ul>li{
+    display: inline-block;
+    height: 45px;
+    color: #F8F8F8;
+    font-size: 0.97rem;
+    margin:0px 1px;
+    padding:0px 5;
 }

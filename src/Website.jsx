@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import {
   ScrollToTopOnMount,
   SectionsContainer, 
-  Section,
-  Header,
-  Footer
+  Section
 } from 'react-fullpage';
+import Header from './Header';
 // const app = document.querySelector('#root');
 
 class Website extends Component {
@@ -27,20 +26,16 @@ class Website extends Component {
                               console.log(a)
                             }
     };
+
  
     return (
       <div>
-        <Header>
+        <Header className="header">
           <a href="#sectionOne">Section One</a>
           <a href="#sectionTwo">Section Two</a>
           <a href="#sectionThree">Section Three</a>
           <a href="#sectionFour">Section Foure</a>
         </Header>
-        <Footer>
-          <a href="">Dcoumentation</a>
-          <a href="">Website Source</a>
-          <a href="">About</a>
-        </Footer>
         <ScrollToTopOnMount />
         <SectionsContainer className="container" {...options}>
           <Section className="custom-section" verticalAlign="true" color="#69D2E7">Page 1</Section>
